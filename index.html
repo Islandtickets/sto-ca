@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento con PayPal</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AdzlJUZiuR-s3A8NJpzvjT-Z-Qp8yDM9MTp3Aw0C6byTV9VVObrrhWzsprJBk9nHVz3eLmELCz1mG4KK&currency=EUR"></script>
+</head>
+<body>
+    <h2>Paga 50€ con PayPal</h2>
+    <div id="paypal-button-container"></div>
+    
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '50.00'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Pagamento completato con successo da ' + details.payer.name.given_name);
+                });
+            },
+            onError: function(err) {
+                console.error('Errore nel pagamento:', err);
+                alert('Si è verificato un errore durante il pagamento. Riprova.');
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+</html>
