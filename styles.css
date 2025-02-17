@@ -1,0 +1,228 @@
+/* Importa il font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Stile generale */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(244, 244, 244);
+    color: rgb(51, 51, 51);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: rgb(10, 37, 64);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Titolo principale */
+h1 {
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    font-weight: bold;
+}
+
+/* Stile della navigazione */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+/* Sezioni */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Titoli sezioni */
+h2, h3 {
+    color: rgb(10, 37, 64);
+}
+
+/* Pulsanti */
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #cc5500;
+    transform: scale(1.05);
+}
+
+/* Layout delle card (Corsi ed EA) */
+.course, .ea {
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course:hover, .ea:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: rgb(10, 37, 64);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+/* Stile per il pacchetto completo */
+.ea-package {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ea-package:hover {
+    transform: scale(1.05);
+}
+
+.ea-package h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f8d210;
+}
+
+.ea-package p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ea-package ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ea-package ul li {
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Stile per il pulsante di acquisto */
+.buy-button {
+    display: inline-block;
+    background: #f8d210;
+    color: #0d1b2a;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.buy-button:hover {
+    background: #ffae00;
+    transform: scale(1.1);
+}
+/* Sezione Contatti */
+#contatti {
+    background: #f9f9f9;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+#contatti h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d1b2a;
+    margin-bottom: 15px;
+}
+
+#contatti p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.contact-email {
+    background: #0073e6;
+    color: white;
+}
+
+.contact-email:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+}
+
+.contact-instagram {
+    background: #e4405f;
+    color: white;
+}
+
+.contact-instagram:hover {
+    background: #c72e4b;
+    transform: scale(1.05);
+}
+
+/* Icone */
+.contact-info i {
+    margin-right: 10px;
+    font-size: 22px;
+}
