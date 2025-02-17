@@ -3,34 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento con PayPal</title>
-    <script src="https://www.paypal.com/sdk/js?client-id=AdzlJUZiuR-s3A8NJpzvjT-Z-Qp8yDM9MTp3Aw0C6byTV9VVObrrhWzsprJBk9nHVz3eLmELCz1mG4KK&currency=EUR"></script>
+    <title>United Investment - Corsi & Expert Advisor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Paga 50€ con PayPal</h2>
-    <div id="paypal-button-container"></div>
-    
-    <script>
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '50.00'
-                        }
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Pagamento completato con successo da ' + details.payer.name.given_name);
-                });
-            },
-            onError: function(err) {
-                console.error('Errore nel pagamento:', err);
-                alert('Si è verificato un errore durante il pagamento. Riprova.');
-            }
-        }).render('#paypal-button-container');
-    </script>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="United Investment Logo" class="logo">
+        </div>
+        <h1>United Investment</h1>
+        <nav>
+            <ul>
+                <li><a href="#corsi">Corsi</a></li>
+                <li><a href="#expert-advisor">Trading System</a></li>
+                <li><a href="#ea-package">Pacchetto Completo</a></li>
+                <li><a href="#about">Chi Siamo</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Impara a Investire e Usa i Migliori Trading System</h2>
+        <p>Corsi di formazione e sistemi automatici per il trading di successo.</p>
+    </section>
+<section id="corsi">
+        <h2>I Nostri Corsi di Trading</h2>
+
+        <div class="course">
+            <h3>Corso Trading Base</h3>
+            <p>Impara le basi del trading e i concetti fondamentali.</p>
+            <h3>Prezzo: €99</h3>
+            <button>Acquista Ora</button> <!-- Da configurare -->
+        </div>
+
+        <div class="course">
+            <h3>Corso Trading Avanzato</h3>
+            <p>Approfondisci le strategie e le analisi tecniche.</p>
+            <h3>Prezzo: €199</h3>
+            <button>Acquista Ora</button> <!-- Da configurare -->
+        </div>
+
+        <div class="course">
+            <h3>Corso Trading 1-to-1</h3>
+            <p>Sessioni personalizzate con un esperto.</p>
+            <h3>Prezzo: €399</h3>
+            <button>Acquista Ora</button> <!-- Da configurare -->
+        </div>
+    </section>
+
+
+    <section id="expert-advisor">
+        <h2>Expert Advisor (Trading System)</h2>
+
+        <!-- EA Scalping Pro -->
+        <div class="ea">
+         <h3>📈 EA Scalping Pro – Massima Precisione per lo Scalping!</h3>
+            <p>💥 Vuoi operazioni rapide e profittevoli? EA Scalping Pro è il tuo alleato ideale! 
+            Basato su EMA e RSI, questo Expert Advisor individua con precisione i migliori punti 
+            d’ingresso ed esegue operazioni fulminee. Perfetto per il mercato volatile, con gestione 
+            dinamica del rischio e filtri avanzati per massimizzare i tuoi profitti!</p>
+            <p>🚀 Veloce, efficiente e adatto a chi ama lo scalping aggressivo!</p>
+            <h3>Prezzo: €149</h3>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="TUO-EMAIL-PAYPAL">
+                <input type="hidden" name="item_name" value="EA Scalping Pro">
+                <input type="hidden" name="amount" value="149">
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="hidden" name="return" value="https://tuosito.com/success_scalping.php">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Paga con PayPal">
+            </form>
+        </div>
+
+        <!-- EA Trend Master -->
+        <div class="ea">
+            <h3>📊 EA Trend Master – Segui il Trend e Guadagna!</h3>
+            <p>🔍 Il trend è il tuo migliore amico! EA Trend Master utilizza una combinazione potente di EMA e MACD 
+            per identificare le migliori opportunità di trading. Perfetto per chi desidera entrare nei mercati con 
+            sicurezza e mantenere le posizioni vincenti, grazie a un money management intelligente e una strategia solida.</p>
+            <p>🔥 Semplice da usare, efficace nei mercati trending e con un potenziale di profitto elevato!</p>
+            <h3>Prezzo: €199</h3>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="TUO-EMAIL-PAYPAL">
+                <input type="hidden" name="item_name" value="EA Trend Master">
+                <input type="hidden" name="amount" value="199">
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="hidden" name="return" value="https://tuosito.com/success_trend.php">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Paga con PayPal">
+            </form>
+        </div>
+
+        <!-- EA Grid Trader -->
+        <div class="ea">
+          <h3>🔄 EA Grid Trader – Massimizza i Profitti con il Grid Trading!</h3>
+            <p>🎯 Vuoi capitalizzare ogni movimento di mercato? EA Grid Trader è progettato per aprire ordini a intervalli 
+            regolari, sfruttando la volatilità senza dipendere dalla direzione del prezzo. Perfetto per trader che amano 
+            strategie automatizzate e a basso rischio, con gestione avanzata delle operazioni e del capitale.</p>
+            <p>💡 Un EA potente per chi vuole profitti costanti nel tempo!</p>
+            <h3>Prezzo: €249</h3>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="TUO-EMAIL-PAYPAL">
+                <input type="hidden" name="item_name" value="EA Grid Trader">
+                <input type="hidden" name="amount" value="249">
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="hidden" name="return" value="https://tuosito.com/success_grid.php">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Paga con PayPal">
+            </form>
+        </div>
+
+        <!-- EA Smart Algo -->
+        <div class="ea">
+            <h3>🧠 EA Smart Algo – Intelligenza e Precisione nel Trading!</h3>
+            <p>🔮 L’algoritmo intelligente che si adatta al mercato! EA Smart Algo utilizza una strategia avanzata basata su EMA, ATR e gestione del 
+            rischio adattiva, garantendo operazioni mirate e sicure. Con calcolo dinamico della size del lotto, spread filter e protezione contro
+            movimenti improvvisi, è la soluzione perfetta per trader professionisti e principianti.</p>
+            <p>📊 Un mix di tecnologia e strategia per risultati eccezionali!</p>
+            <h3>Prezzo: €249</h3>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="TUO-EMAIL-PAYPAL">
+                <input type="hidden" name="item_name" value="EA Smart Algo">
+                <input type="hidden" name="amount" value="249">
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="hidden" name="return" value="https://tuosito.com/success_smart.php">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Paga con PayPal">
+            </form>
+        </div>
+    </section>
+
+    <!-- Pacchetto Completo EA -->
+    <section id="ea-package" class="ea-package">
+    <h2>🔥 Pacchetto Completo Expert Advisor – Ottieni il Meglio del Trading! 🔥</h2>
+    <p>🚀 **Massimizza i tuoi profitti con il trading automatizzato!** Acquista il pacchetto completo e ottieni tutti e **4 i migliori Expert Advisor** per una strategia di successo.</p>
+
+    <ul>
+        <li>📈 <strong>EA Scalping Pro</strong> → Perfetto per operazioni rapide e precise</li>
+        <li>📊 <strong>EA Trend Master</strong> → Segui il trend e ottieni profitti costanti</li>
+        <li>🔄 <strong>EA Grid Trader</strong> → Massimizza i profitti con il Grid Trading</li>
+        <li>🧠 <strong>EA Smart Algo</strong> → L’intelligenza artificiale applicata al trading</li>
+    </ul>
+
+    <h3>🔥 Offerta Speciale: <span style="color:#f8d210;">€449</span></h3>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="TUO-EMAIL-PAYPAL">
+        <input type="hidden" name="item_name" value="Pacchetto Completo Expert Advisor">
+        <input type="hidden" name="amount" value="449">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="return" value="https://tuosito.com/success_package.php">
+        <input type="hidden" name="cancel_return" value="https://tuosito.com/cancel.html">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" class="buy-button" name="submit" alt="Paga con PayPal">
+    </form>
+</section>
+<section id="contatti">
+    <h2>📩 Contattaci</h2>
+    <div class="contact-info">
+        <a href="mailto:united.investment.14@gmail.com" class="contact-email">
+            📧 Email: united.investment.14@gmail.com
+        </a>
+        <a href="https://www.instagram.com/united_investment_?igsh=MThya3AyaG1mcjhpbA%3D%3D&utm_source=qr" target="_blank" class="contact-instagram">
+            📱 Seguici su Instagram: @united_investment_
+        </a>
+    </div>
+</section>
+    <footer>
+        <p>&copy; 2025 United Investment. Tutti i diritti riservati.</p>
+    </footer>
 </body>
 </html>
