@@ -78,7 +78,7 @@ button:hover {
 
 /* Layout delle card (Corsi ed EA) */
 .course, .ea {
-    background: white;
+    background: 135deg, #0d1b2a, #1b263b;
     margin: 20px auto;
     padding: 25px;
     border-radius: 10px;
