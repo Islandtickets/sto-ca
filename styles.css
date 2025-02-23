@@ -1,10 +1,10 @@
 /* Importa il font Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://i.postimg.cc/wxG6s5kd/Logo.jpg');
 
 /* Stile generale */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(000, 000, 000);
     color: rgb(51, 51, 51);
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
 
 /* Header */
 header {
-    background-color: rgb(10, 37, 64);
+    background-color: rgb(000, 000, 000);
     color: white;
     text-align: center;
     padding: 20px;
